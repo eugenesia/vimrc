@@ -25,7 +25,7 @@ set ruler
 " Show colored column at 80 chars
 set colorcolumn=80
 
-" Initial window size
-set lines=30 columns=100
+" Initial window size. Remove to allow system to decide window size.
+" set lines=30 columns=100
 
 
