@@ -4,28 +4,33 @@ set expandtab
 set shiftwidth=2
 set smartindent
 
-" Make backspace work like most other apps
+" Make backspace work like most other apps.
 set backspace=eol,indent,start
 
 " Turn on syntax highlighting.
 syntax on
 
-" Wrap at word
+" Wrap at word.
 set lbr
 
-" Choose colorscheme
+" Choose colorscheme.
 colorscheme elflord
 
-" Show line numbers
+" Show line numbers.
 set number
 
-" Show line position
+" Show line position.
 set ruler
 
-" Show colored column at 80 chars
-set colorcolumn=80
+" Highlight long lines, see http://vim.wikia.com/wiki/Highlight_long_lines .
+if version >= 703
+  " Show colored column at 80 chars.
+  set colorcolumn=80
+else
+  " If can't show colorcolumn, highlight long lines instead.
+  :match ErrorMsg '\%>80v.\+'
+endif
 
 " Initial window size. Remove to allow system to decide window size.
 " set lines=30 columns=100
-
 
