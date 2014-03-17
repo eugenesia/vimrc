@@ -22,7 +22,7 @@ set number
 " Show line position.
 set ruler
 
-" Highlight long lines, see http://vim.wikia.com/wiki/Highlight_long_lines .
+" Highlight long lines, see http://vim.wikia.com/wiki/Highlight_long_lines
 if version >= 703
   " Show colored column at 80 chars.
   set colorcolumn=80
@@ -34,3 +34,8 @@ endif
 " Initial window size. Remove to allow system to decide window size.
 " set lines=30 columns=100
 
+" VCL syntax highlighter https://github.com/pld-linux/vim-syntax-vcl
+" Instead of putting plugin files into several folders, put it in one folder
+" like in Pathogen, and run it on load.
+au BufRead,BufNewFile *.vcl :set ft=vcl
+au! Syntax vcl source ~/.vim/bundle/vim-syntax-vcl/vcl.vim
