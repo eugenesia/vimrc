@@ -41,5 +41,5 @@ au BufRead,BufNewFile *.vcl :set ft=vcl
 au! Syntax vcl source ~/.vim/bundle/vim-syntax-vcl/vcl.vim
 
 " Apache conf syntax detection doesn't seem to be working properly.
-au BufNewFile,BufRead *.conf* setf apache 
+au BufNewFile,BufRead *.conf* :set ft=apache 
 
