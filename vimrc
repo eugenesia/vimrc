@@ -48,5 +48,5 @@ au! Syntax vcl source ~/.vim/bundle/vim-syntax-vcl/vcl.vim
 au BufNewFile,BufRead *.conf* :set ft=apache 
 
 " Drupal PHP files.
-autocmd BufNewFile,BufRead *.module,*.inc :set filetype=php
+autocmd BufNewFile,BufRead *.module,*.inc :set syntax=php
 
