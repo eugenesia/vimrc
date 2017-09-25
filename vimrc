@@ -34,6 +34,10 @@ endif
 " Initial window size. Remove to allow system to decide window size.
 " set lines=30 columns=100
 
+
+" *****************************************************************************
+" Filetype settings
+
 " VCL syntax highlighter https://github.com/pld-linux/vim-syntax-vcl
 " Instead of putting plugin files into several folders, put it in one folder
 " like in Pathogen, and run it on load.
@@ -42,4 +46,7 @@ au! Syntax vcl source ~/.vim/bundle/vim-syntax-vcl/vcl.vim
 
 " Apache conf syntax detection doesn't seem to be working properly.
 au BufNewFile,BufRead *.conf* :set ft=apache 
+
+" Drupal PHP files.
+autocmd BufNewFile,BufRead *.module,*.inc :set filetype=php
 
